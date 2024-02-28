@@ -5,6 +5,8 @@ Trabalho de sitemas distribuidos 2024
 ![panda-kung fu](./Img/Po_icon.webp)
 
 
-vinho
+Vinho
 
 Sporting Clube De Portugal   
+
+Engenharia Informatica  
