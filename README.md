@@ -2,3 +2,5 @@
 Trabalho de sitemas distribuidos 2024 
 
 vinho
+
+Sporting Clube De Portugal   
