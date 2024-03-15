@@ -7,7 +7,7 @@ class NewClass:
     def setX(self,x):
         self.x=x;
 
-reconstructed = pickle.load(open('./files/outputser2','rb'))
+reconstructed = pickle.load(open('../file/outputser2','rb'))
 print("Data from reconstructed object:", reconstructed.data,reconstructed.x)
 reconstructed.setX(2)
 print("Data from reconstructed object:", reconstructed.data,reconstructed.x)
