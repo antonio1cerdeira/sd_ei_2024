@@ -1,6 +1,7 @@
 from xmlrpc.server import SimpleXMLRPCServer
 from xmlrpc.server import SimpleXMLRPCRequestHandler
 
+
 # Restrict to a particular path.
 class RequestHandler(SimpleXMLRPCRequestHandler):
     rpc_paths = ('/RPC2',)
@@ -58,6 +59,14 @@ with SimpleXMLRPCServer(('localhost', 8000),
     def allPrime(x):
         primes = [i for i in range(2, x + 1) if Calq_Primo(i)]
         return primes
+
+
+    def calcular_tabuada(numero):
+        app=""
+        for count in range(10):
+            app+=("%d x %d = %d\n" % (numero, count + 1, numero * (count + 1)))
+        return app
+    server.register_function(calcular_tabuada, 'tabuada')
     # Register an instance; all the methods of the instance are
     # published as XML-RPC methods (in this case, just 'mul').
     class MyFuncs:

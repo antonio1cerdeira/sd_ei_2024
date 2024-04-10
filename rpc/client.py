@@ -1,9 +1,10 @@
 import xmlrpc.client
 
 s = xmlrpc.client.ServerProxy('http://localhost:8000')
-x= int(input("entre o 1-valor: "))
-y=int(input("entre o 2-valor: "))
-print("---------Somatorio----------")
+"""x= int(input("entre o 1-valor: "))
+y=int(input("entre o 2-valor: "))"""
+numero=int(input("Tabuada do numero: "))
+"""print("---------Somatorio----------")
 z=int(input("entre o valor para o somatorio: "))
 print("---------numero imaginario 1 ----------")
 a1=float(input("parte real "))
@@ -29,4 +30,6 @@ parteReal, parteIm = s.mulimaginarios_function(a1, i1, a2, i2)
 print("mul do complexo é {} + {}i".format(parteReal, parteIm))
 print("---------numeros primos ----------")
 print(s.Calq_Primo(p))
-print(s.system.listMethods())
+print(s.system.listMethods())"""
+print("---------Tabuada----------")
+print(s.tabuada(numero))
