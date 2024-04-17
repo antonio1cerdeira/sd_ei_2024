@@ -10,22 +10,38 @@ function onOpen() {
      .addToUi();
  }
 
-// Esta função é chamada quando o item 'Calcular' é selecionado no menu.
-function calcularPolinomio() {
-  // Obtém a folha de cálculo ativa e a folha chamada 'User'.
-  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('User');
-  // Obtém o valor de 'x' da célula B2.
-  var x = sheet.getRange('B2').getValue();
-  // Obtém o valor de 'k' da célula B3.
-  var k = sheet.getRange('B3').getValue();
- 
-  try {
-     // Tenta calcular o polinómio chamando a função 'polinomio(k, x)'.
-     var resultado = polinomio(k, x);
-     // Define o valor do resultado na célula B4.
-     sheet.getRange('B4').setValue(resultado);
-  } catch (error) {
-     // Se ocorrer um erro durante o cálculo, define uma mensagem de erro na célula B4.
-     sheet.getRange('B4').setValue('Erro: ' + error.message);
+ function calcularPolinomio() {
+   // Abre uma streed sheet específica pelo seu ID
+   var spreadsheet = SpreadsheetApp.openById('1sF4HTd9BonvOOf_zE-58IpLvkgrHhrObP57lfQ2eA6k');
+   // Regista no log o nome da streed sheet aberta
+   Logger.log('Streed sheet aberta: ' + spreadsheet.getName());
+  
+   // Lista todos os nomes das folhas na streed sheet para depuração
+   var sheets = spreadsheet.getSheets();
+   var sheetNames = sheets.map(function(sheet) {
+      return sheet.getName();
+   });
+   // Regista no log os nomes das folhas
+   Logger.log('Sheet names: ' + sheetNames.join(', '));
+  
+   // Tenta obter a folha chamada 'User'
+   var sheet = spreadsheet.getSheetByName('User');
+  
+   // Se a folha 'User' não for encontrada, lança um erro
+   if (!sheet) {
+       throw new Error("Streed sheet 'User' não encontrada.");
+   }
+  
+   // Obtém os valores das células B2 e B3 da folha 'User'
+   var x = sheet.getRange('B2').getValue();
+   var k = sheet.getRange('B3').getValue();
+  
+   try {
+      // Tenta calcular o polinômio com os valores obtidos e armazena o resultado na célula B4
+      var resultado = polinomio(k, x); // Supõe-se que polinomio é uma função definida em outra parte do seu código
+      sheet.getRange('B4').setValue(resultado);
+   } catch (error) {
+      // Se ocorrer um erro durante o cálculo, regista o erro na célula B4
+      sheet.getRange('B4').setValue('Erro: ' + error.message);
+   }
   }
-}
