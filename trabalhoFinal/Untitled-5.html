@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <base target="_top">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+       .data-container {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
+       .data-item {
+            margin-bottom: 10px;
+        }
+       .data-item label {
+            font-weight: bold;
+        }
+       .result {
+            font-size: 24px;
+            color: #009688;
+            font-weight: bold;
+        }
+       .number {
+            font-size: 18px;
+            color: #333;
+        }
+       .ok-button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+       .ok-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+ </head>
+ <body>
+    <h1>Resultado do cálculo do Polinômio</h1>
+    <div class="data-container">
+        <div class="data-item">
+            <label>Primeiro número:</label>
+            <span class="number" id="firstNumber"></span>
+        </div>
+        <div class="data-item">
+            <label>Segundo número:</label>
+            <span class="number" id="secondNumber"></span>
+        </div>
+        <div class="data-item">
+            <label>Resultado:</label>
+            <span class="result" id="result"></span>
+        </div>
+        <button class="ok-button" onclick="closeTab()">OK</button>
+    </div>
+
+    <script>
+        // Define and populate the data array
+        var data = [10, 5, 15]; // Replace these values with your actual data
+
+        // Update the HTML with the data
+        document.getElementById('firstNumber').textContent = data[0];
+        document.getElementById('secondNumber').textContent = data[1];
+        document.getElementById('result').textContent = data[2];
+
+        // Function to close the tab
+        function closeTab() {
+            window.close();
+        }
+    </script>
+ </body>
+</html>
+
+//
+<!DOCTYPE html>
+<html>
+ <head>
+    <base target="_top">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+       .data-container {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
+       .data-item {
+            margin-bottom: 10px;
+        }
+       .data-item label {
+            font-weight: bold;
+        }
+    </style>
+ </head>
+ <body>
+    <h1>Resultado calculo do Polinômio</h1>
+    <div class="data-container">
+        <div class="data-item">
+            <label>Primeiro número:</label>
+            <span><?= data[0]?></span>
+        </div>
+        <div class="data-item">
+            <label>Segundo número:</label>
+            <span><?= data[1]?></span>
+        </div>
+        <div class="data-item">
+            <label>Resultado:</label>
+            <span><?= data[2]?></span>
+        </div>
+    </div>
+ </body>
+</html>

@@ -1,0 +1,24 @@
+<div class="data-container">
+<button class="close-btn" onclick="this.parentElement.style.display='none';">Fechar</button>
+
+<!-- Este é o contêiner para os itens de dados -->
+<div class="data-item">
+    <label>Primeiro número:</label>
+    <!-- Aqui exibimos o primeiro número -->
+    <span><?= data[0]?></span>
+</div>
+
+<!-- Este é outro item de dados -->
+<div class="data-item">
+    <label>Segundo número:</label>
+    <!-- Aqui exibimos o segundo número -->
+    <span><?= data[1]?></span>
+</div>
+
+<!-- Este é o item de dados para o resultado -->
+<div class="data-item">
+    <label>Resultado:</label>
+    <!-- Aqui exibimos o resultado do cálculo -->
+    <span><?= data[2]?></span>
+</div>
+</div>
