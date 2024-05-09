@@ -1,18 +1,12 @@
   # sd_ei_1700430_2024
 Trabalho de sitemas distribuidos 2024 
 
-![panda-kung fu](./Img/Po_icon.webp)
-
-Vinho
-
-Sporting Clube De Portugal   
-
 Engenharia Informatica 
 //link do trabalho a funcionar
 //forms
 https://forms.gle/eShBmGNVrrevd2R69
 //spreedsheat
-link:https://drive.google.com/drive/folders/12BpdiZXThZXZqyv8npe_Y21MBTgLisDP
+https://drive.google.com/drive/folders/12BpdiZXThZXZqyv8npe_Y21MBTgLisDP
 
 Nome: António José Cerdeira 
 Trabalho: Implementar função polinomio(k,x)
